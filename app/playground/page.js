@@ -1,5 +1,5 @@
 import Trend from '@/components/trend'
-import PageHeader from '../../components/page-header'
+import PageHeader from '@/components/page-header'
 
 export default function Page() {
   return (
