@@ -2,10 +2,11 @@ import Trend from '@/components/trend'
 import PageHeader from '@/components/page-header'
 import TransactionItem from '@/components/transaction-item';
 import TransactionSummaryItem from '@/components/transaction-summary-item';
+import Button from '@/components/button';
 
 export default function Page() {
   return (
-    <main className="space-y-8">
+    <main className="space-y-8 mb-44">
       <h1 className="text-4xl mt-8">Playground</h1>
 
       <div>
@@ -46,6 +47,20 @@ export default function Page() {
           <TransactionItem type="Expense" category="Food" description="Going out to eat" amount={29} />
           <TransactionItem type="Saving" description="For children" amount={500} />
           <TransactionItem type="Investment" description="In Microsoft" amount={9000} />
+        </div>
+      </div>
+
+      <div>
+        <h2 className="mb-4 text-lg font-mono">Buttons</h2>
+        <hr className="mb-4 border-gray-200 dark:border-gray-800" />
+        <div className="space-x-4">
+          <Button>Hello</Button>
+          <Button variant="outline">Hello</Button>
+          <Button variant="ghost">Hello</Button>
+
+          <Button size="xs">Hello</Button>
+          <Button size="sm">Hello</Button>
+          <Button size="lg">Hello</Button>
         </div>
       </div>
     </main>
