@@ -18,7 +18,12 @@ const groupAndSumTransactionsByDate = (transactions) => {
 
 export default async function TransactionList() {
   const response = await fetch(
-    'http://localhost:3100/transactions'
+    'http://localhost:3100/transactions',
+    {
+      next: {
+        tags: [`transaction-list-user-me`]
+      }
+    }
   )
   const transactions = await response.json()
   const grouped = groupAndSumTransactionsByDate(transactions)

@@ -31,6 +31,142 @@
       "description": "Rent",
       "category": "Housing",
       "created_at": "2024-05-10T23:00:00"
+    },
+    {
+      "type": "Income",
+      "category": "House",
+      "description": "Helllo!",
+      "amount": "100",
+      "created_at": "2024-02-03T18:41:11.130Z",
+      "id": 5
+    },
+    {
+      "type": "Expense",
+      "category": "Education",
+      "description": "Just bought a course",
+      "amount": "99",
+      "created_at": "2024-02-03T18:51:10.495Z",
+      "id": 6
+    },
+    {
+      "type": "Income",
+      "category": "House",
+      "description": "",
+      "amount": "0",
+      "created_at": "2024-02-03T19:57:56.218Z",
+      "id": 7
+    },
+    {
+      "type": "Income",
+      "category": "House",
+      "description": "",
+      "amount": "0",
+      "created_at": "2024-02-03T19:58:53.901Z",
+      "id": 8
+    },
+    {
+      "type": "Income",
+      "category": "House",
+      "description": "",
+      "amount": "0",
+      "created_at": "2024-02-03T19:59:03.839Z",
+      "id": 9
+    },
+    {
+      "type": "Income",
+      "category": "House",
+      "description": "",
+      "amount": "0",
+      "created_at": "2024-02-03T19:59:11.214Z",
+      "id": 10
+    },
+    {
+      "type": "Income",
+      "category": "House",
+      "description": "",
+      "amount": "0",
+      "created_at": "2024-02-03T19:59:34.158Z",
+      "id": 11
+    },
+    {
+      "type": "Income",
+      "category": "House",
+      "description": "",
+      "amount": "0",
+      "created_at": "2024-02-03T20:00:10.382Z",
+      "id": 12
+    },
+    {
+      "type": "Income",
+      "category": "House",
+      "description": "",
+      "amount": "0",
+      "created_at": "2024-02-03T20:09:25.356Z",
+      "id": 13
+    },
+    {
+      "type": "Income",
+      "category": "House",
+      "description": "Hello!",
+      "amount": "55",
+      "created_at": "2024-02-03T20:14:23.754Z",
+      "id": 14
+    },
+    {
+      "type": "Income",
+      "category": "House",
+      "description": "",
+      "amount": "0",
+      "created_at": "2024-02-03T20:14:56.975Z",
+      "id": 15
+    },
+    {
+      "type": "Income",
+      "category": "House",
+      "description": "",
+      "amount": "0",
+      "created_at": "2024-02-03T21:18:54.405Z",
+      "id": 16
+    },
+    {
+      "type": "Income",
+      "category": "House",
+      "description": "",
+      "amount": "0",
+      "created_at": "2024-02-03T21:19:21.421Z",
+      "id": 17
+    },
+    {
+      "type": "Income",
+      "category": "House",
+      "description": "",
+      "amount": "0",
+      "created_at": "2024-02-03T21:20:30.784Z",
+      "id": 18
+    },
+    {
+      "type": "Income",
+      "category": "Health",
+      "description": "Getting checked",
+      "amount": "1000",
+      "created_at": "2024-02-04T11:41:39.636Z",
+      "id": 19
+    },
+    {
+      "type": "Expense",
+      "category": "Car",
+      "description": "Car lease",
+      "amount": "499",
+      "created_at": "2024-02-04T12:39:40.227Z",
+      "id": 20
+    },
+    {
+      "type": "Expense",
+      "category": "Education",
+      "description": "Buying that book for studies",
+      "amount": "50",
+      "created_at": "2024-02-04T13:01:59.084Z",
+      "id": 21
     }
   ],
   "trends": [

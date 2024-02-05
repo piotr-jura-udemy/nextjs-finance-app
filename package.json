@@ -10,12 +10,14 @@
     "json-server": "json-server --watch db.json --port 3100"
   },
   "dependencies": {
+    "@headlessui/react": "^1.7.18",
     "json-server": "^0.17.4",
     "lucide-react": "^0.316.0",
     "next": "14.1.0",
     "react": "^18",
     "react-cookie": "^7.0.2",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "react-hook-form": "^7.50.0"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",
