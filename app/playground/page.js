@@ -9,6 +9,10 @@ import Select from '@/components/select';
 import Separator from '@/components/separator';
 import Skeleton from '@/components/skeleton';
 
+export const metadata = {
+  title: "Playground"
+}
+
 export default function Page() {
   return (
     <main className="space-y-8 mb-44">
