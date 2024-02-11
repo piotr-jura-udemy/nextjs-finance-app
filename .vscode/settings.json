@@ -1,4 +1,5 @@
 {
   "css.lint.unknownAtRules": "ignore",
-  "workbench.colorTheme": "Pitch Black"
+  "workbench.colorTheme": "Pitch Black",
+  "editor.fontWeight": "bold"
 }
