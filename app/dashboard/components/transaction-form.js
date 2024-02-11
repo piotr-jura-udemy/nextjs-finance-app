@@ -5,6 +5,8 @@ import Label from "@/components/label";
 import Select from "@/components/select";
 import { categories, types } from "@/lib/consts";
 import { useForm } from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod"
+import { transactionSchema } from "@/lib/validation";
 
 export default function TransactionForm() {
   const {
@@ -14,6 +16,7 @@ export default function TransactionForm() {
     formState: { errors },
   } = useForm({
     mode: "onTouched",
+    resolver: zodResolver(transactionSchema)
   })
 
   const onSubmit = (data) => console.log(data)
