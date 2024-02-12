@@ -5,7 +5,7 @@ import Label from "@/components/label";
 import Select from "@/components/select";
 import { categories, types } from "@/lib/consts";
 import { useForm } from "react-hook-form";
-import {zodResolver} from "@hookform/resolvers/zod"
+import { zodResolver } from "@hookform/resolvers/zod"
 import { transactionSchema } from "@/lib/validation";
 
 export default function TransactionForm() {
@@ -19,7 +19,10 @@ export default function TransactionForm() {
     resolver: zodResolver(transactionSchema)
   })
 
-  const onSubmit = (data) => console.log(data)
+  const onSubmit = (data) => {
+    console.log(data)
+    console.log(process.env.NEXT_PUBLIC_API_URL)
+  }
 
   return <form className="space-y-4"
     onSubmit={handleSubmit(onSubmit)}>
