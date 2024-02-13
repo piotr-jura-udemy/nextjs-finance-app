@@ -39,6 +39,14 @@
       "description": "Paying for stuff...",
       "created_at": "2024-01-23T00:00:00",
       "id": 5
+    },
+    {
+      "type": "Investment",
+      "category": "Education",
+      "amount": 10000,
+      "description": "For the future",
+      "created_at": "2023-11-17T00:00:00",
+      "id": 6
     }
   ],
   "trends": [
