@@ -47,6 +47,30 @@
       "description": "For the future",
       "created_at": "2023-11-17T00:00:00",
       "id": 6
+    },
+    {
+      "type": "Income",
+      "category": "Housing",
+      "amount": 6771,
+      "description": "Paying for stuff...",
+      "created_at": "2023-11-17T00:00:00",
+      "id": 7
+    },
+    {
+      "type": "Income",
+      "category": "Housing",
+      "amount": 343,
+      "description": "Paying for stuff...",
+      "created_at": "2024-01-23T00:00:00",
+      "id": 8
+    },
+    {
+      "type": "Saving",
+      "category": "Housing",
+      "amount": 500,
+      "description": "Salary",
+      "created_at": "2023-11-17T00:00:00",
+      "id": 9
     }
   ],
   "trends": [
