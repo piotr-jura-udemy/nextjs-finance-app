@@ -11,10 +11,6 @@ import { createClient } from "@/lib/supabase/server"
 export default async function Page() {
   const client = createClient()
 
-  console.log(
-    await client.from('transactions').select()
-  )
-
   return (<>
     <section className="mb-8">
       <h1 className="text-4xl font-semibold">Summary</h1>

@@ -71,6 +71,22 @@
       "description": "Salary",
       "created_at": "2023-11-17T00:00:00",
       "id": 9
+    },
+    {
+      "type": "Income",
+      "category": "Housing",
+      "amount": 1,
+      "description": "Salary",
+      "created_at": "2024-01-23T00:00:00",
+      "id": 10
+    },
+    {
+      "type": "Income",
+      "category": "Housing",
+      "amount": 1,
+      "description": "Salary",
+      "created_at": "2024-01-23T00:00:00",
+      "id": 11
     }
   ],
   "trends": [
