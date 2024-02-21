@@ -9,7 +9,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { transactionSchema } from "@/lib/validation";
 import { useState } from "react";
 import { useRouter } from "next/navigation"
-import { createTransaction, purgeTransactionListCache } from "@/lib/actions";
+import { createTransaction } from "@/lib/actions";
 import FormError from "@/components/form-error";
 
 export default function TransactionForm() {
