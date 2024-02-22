@@ -7,7 +7,7 @@ import { categories, types } from "@/lib/consts";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod"
 import { transactionSchema } from "@/lib/validation";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useRouter } from "next/navigation"
 import { createTransaction } from "@/lib/actions";
 import FormError from "@/components/form-error";
@@ -29,6 +29,8 @@ export default function TransactionForm() {
   const type = watch("type")
 
   const onSubmit = async (data) => {
+    console.log(data)
+    return
     setSaving(true)
     setLastError()
     try {
