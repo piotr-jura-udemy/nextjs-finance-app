@@ -6,29 +6,21 @@ import TrendFallback from "./components/trend-fallback"
 import Link from 'next/link'
 import { PlusCircle } from 'lucide-react'
 import { sizes, variants } from "@/lib/variants"
-import { createClient } from "@/lib/supabase/server"
+import { ErrorBoundary } from "react-error-boundary";
+import { types } from "@/lib/consts"
 
 export default async function Page() {
-  const client = createClient()
-
   return (<>
     <section className="mb-8">
       <h1 className="text-4xl font-semibold">Summary</h1>
     </section>
 
     <section className="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-8">
-      <Suspense fallback={<TrendFallback />}>
-        <Trend type="Income" />
-      </Suspense>
-      <Suspense fallback={<TrendFallback />}>
-        <Trend type="Expense" />
-      </Suspense>
-      <Suspense fallback={<TrendFallback />}>
-        <Trend type="Saving" />
-      </Suspense>
-      <Suspense fallback={<TrendFallback />}>
-        <Trend type="Investment" />
-      </Suspense>
+      {types.map(type => <ErrorBoundary key={type} fallback={<div className="text-red-500">Cannot fetch {type} trend data</div>}>
+        <Suspense fallback={<TrendFallback />}>
+          <Trend type={type} />
+        </Suspense>
+      </ErrorBoundary>)}
     </section>
 
     <section className="flex justify-between items-center mb-8">
