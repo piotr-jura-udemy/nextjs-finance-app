@@ -1,7 +1,7 @@
 import BaseTrend from "@/components/trend"
 import { createClient } from "@/lib/supabase/server"
 
-export default async function Trend({type}) {
+export default async function Trend({ type }) {
   const supabase = createClient()
   let { data, error } = await supabase
     .rpc('calculate_total', {

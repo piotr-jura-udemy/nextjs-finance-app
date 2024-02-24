@@ -8,11 +8,15 @@ import { PlusCircle } from 'lucide-react'
 import { sizes, variants } from "@/lib/variants"
 import { ErrorBoundary } from "react-error-boundary";
 import { types } from "@/lib/consts"
+import Range from "./components/range"
 
 export default async function Page() {
   return (<>
-    <section className="mb-8">
+    <section className="mb-8 flex justify-between items-center">
       <h1 className="text-4xl font-semibold">Summary</h1>
+      <aside>
+        <Range />
+      </aside>
     </section>
 
     <section className="mb-8 grid grid-cols-2 lg:grid-cols-4 gap-8">
