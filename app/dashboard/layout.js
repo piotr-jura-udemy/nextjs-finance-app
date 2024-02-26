@@ -6,7 +6,7 @@ export default function Layout({ children }) {
       <PageHeader className="my-8" />
       <main>{children}</main>
       <footer className="mt-auto py-8 text-center">
-        Footer
+        {/* Footer */}
       </footer>
     </>
   );
