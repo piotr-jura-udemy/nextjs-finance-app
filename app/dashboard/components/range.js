@@ -14,7 +14,7 @@ export default function Range() {
     replace(`${pathname}?${params.toString()}`)
   }
 
-  return <Select defaultValue={range} onChange={handleChange}>
+  return <Select value={range} onChange={handleChange}>
     <option value="last24hours">Last 24 hours</option>
     <option value="last7days">Last 7 days</option>
     <option value="last30days">Last 30 days</option>
