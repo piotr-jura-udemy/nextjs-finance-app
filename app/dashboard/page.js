@@ -10,11 +10,11 @@ import { ErrorBoundary } from "react-error-boundary";
 import { types } from "@/lib/consts"
 import Range from "./components/range"
 import { fetchTransactions } from "@/lib/actions"
+import TransactionListWrapper from "./components/transaction-list-wrapper"
 
 export default async function Page({ searchParams }) {
   const range = searchParams?.range ?? 'last30days'
   const limit = searchParams?.limit ?? 20
-  const transactions = await fetchTransactions(range, 0, 20)
 
   return (<div className="space-y-8">
     <section className="flex justify-between items-center">
@@ -41,7 +41,7 @@ export default async function Page({ searchParams }) {
     </section>
 
     <Suspense fallback={<TransactionListFallback />}>
-      <TransactionList range={range} limit={limit} initialTransactions={transactions} key={JSON.stringify(transactions)} />
+      <TransactionListWrapper range={range} />
     </Suspense>
   </div>)
 }

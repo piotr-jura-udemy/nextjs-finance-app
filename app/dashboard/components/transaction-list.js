@@ -1,5 +1,4 @@
 'use client'
-
 import Button from "@/components/button"
 import Separator from "@/components/separator"
 import TransactionItem from "@/components/transaction-item"
@@ -39,12 +38,7 @@ export default function TransactionList({ initialTransactions, range, limit }) {
     const newTransactions = await fetchTransactions(range, offset, limit + 20)
     setOffset(offset + 20)
     setDisabled(newTransactions.length === 0)
-    setTransactions(
-      [
-        ...transactions,
-        ...newTransactions
-      ]
-    )
+    setTransactions((prevTransactions) => [...prevTransactions, ...newTransactions])
     setLoading(false)
   }
   const grouped = groupAndSumTransactionsByDate(transactions)
