@@ -8,13 +8,15 @@ export default function Range() {
   const { replace } = useRouter()
   const range = searchParams.get('range') ?? 'last30days'
 
+  console.log(`Range is ${range}`)
+
   const handleChange = (e) => {
-    const params = new URLSearchParams()
+    const params = new URLSearchParams(searchParams)
     params.set('range', e.target.value)
     replace(`${pathname}?${params.toString()}`)
   }
 
-  return <Select defaultValue={range} onChange={handleChange}>
+  return <Select value={range} onChange={handleChange}>
     <option value="last24hours">Last 24 hours</option>
     <option value="last7days">Last 7 days</option>
     <option value="last30days">Last 30 days</option>
