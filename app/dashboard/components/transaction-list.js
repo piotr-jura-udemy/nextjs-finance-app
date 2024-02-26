@@ -6,10 +6,10 @@ import TransactionItem from "@/components/transaction-item"
 import TransactionSummaryItem from "@/components/transaction-summary-item"
 import { fetchTransactions } from "@/lib/actions"
 // import LoadMoreTransactionsButton from './load-more-transactions-button'
-import { useMemo, useState } from "react"
+import { useState } from "react"
 import { Loader } from 'lucide-react';
-import TransactionSummaryItemSkeleton from '../../../components/transaction-summary-item-skeleton';
-import TransactionItemSkeleton from '../../../components/transaction-item-skeleton';
+import TransactionSummaryItemSkeleton from '@/components/transaction-summary-item-skeleton';
+import TransactionItemSkeleton from '@/components/transaction-item-skeleton';
 
 const groupAndSumTransactionsByDate = (transactions) => {
   const grouped = {}
@@ -63,7 +63,7 @@ export default function TransactionList({ initialTransactions, range, limit }) {
             </section>
           </div>
         )}
-        {transactions.length === 0 && <div className="text-center text-gray-400 dark:text-gray-500">No transactions found</div>}
+      {transactions.length === 0 && <div className="text-center text-gray-400 dark:text-gray-500">No transactions found</div>}
       {loading && <div className="space-y-4">
         <TransactionSummaryItemSkeleton />
         <TransactionItemSkeleton />
