@@ -10,7 +10,7 @@ import { Loader } from "lucide-react"
 
 export default function TransactionList({ range, initialTransactions }) {
   const [transactions, setTransactions] = useState(initialTransactions)
-  const [offset, setOffset] = useState(initialTransactions.length + 1)
+  const [offset, setOffset] = useState(initialTransactions.length)
   const [buttonHidden, setButtonHidden] = useState(initialTransactions.length === 0)
   const [loading, setLoading] = useState(false)
   const grouped = groupAndSumTransactionsByDate(transactions)
