@@ -3,7 +3,7 @@ import { HandCoins, Wallet, Landmark, PiggyBank } from 'lucide-react'
 import TransactionItemRemoveButton from "./transaction-item-remove-button"
 
 export default function TransactionItem({
-  id, type, category, description, amount
+  id, type, category, description, amount, onRemoved
 }) {
   const typesMap = {
     'Income': {
@@ -39,7 +39,7 @@ export default function TransactionItem({
     <div className="min-w-[70px] text-right">{formattedAmount}</div>
 
     <div className="min-w-[100px] flex justify-end">
-      <TransactionItemRemoveButton id={id} />
+      <TransactionItemRemoveButton id={id} onRemoved={onRemoved} />
     </div>
   </div>)
 }
