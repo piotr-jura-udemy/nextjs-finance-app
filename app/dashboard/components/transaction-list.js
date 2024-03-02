@@ -10,18 +10,16 @@ import { Loader } from "lucide-react"
 
 export default function TransactionList({ range, initialTransactions }) {
   const [transactions, setTransactions] = useState(initialTransactions)
-  const [offset, setOffset] = useState(initialTransactions.length)
   const [buttonHidden, setButtonHidden] = useState(initialTransactions.length === 0)
   const [loading, setLoading] = useState(false)
   const grouped = groupAndSumTransactionsByDate(transactions)
 
-  const handleClick = async (e) => {
+  const handleClick = async () => {
     setLoading(true)
     let nextTransactions = null
     try {
-      nextTransactions = await fetchTransactions(range, offset, 10)
+      nextTransactions = await fetchTransactions(range, transactions.length, 10)
       setButtonHidden(nextTransactions.length === 0)
-      setOffset(prevValue => prevValue + 10)
       setTransactions(prevTransactions => [
         ...prevTransactions,
         ...nextTransactions
