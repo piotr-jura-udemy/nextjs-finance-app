@@ -5,6 +5,7 @@ import { createClient } from '@/lib/supabase/server'
 import Button from './button'
 import { CircleUser, KeyRound } from 'lucide-react'
 import { sizes, variants } from '@/lib/variants'
+import SignOutButton from './sign-out-button'
 
 export default async function PageHeader({ className }) {
   const theme = useServerDarkMode()
@@ -20,6 +21,7 @@ export default async function PageHeader({ className }) {
           <CircleUser className="w-6 h-6" />
           <span>{user?.email}</span>
         </Button>}
+        {user && <SignOutButton />}
         {!user && <Link href="/login" className={`${variants['ghost']} ${sizes['sm']}`}>
           <KeyRound className="w-6 h-6" />
         </Link>}
