@@ -10,6 +10,7 @@ export default async function PageHeader({ className }) {
   const theme = useServerDarkMode()
   const supabase = createClient()
   const { data: { user }, error } = await supabase.auth.getUser()
+  console.log(user)
   return (
     <header className={`flex justify-between items-center ${className}`}>
       <Link href="/dashboard" className="text-xl hover:underline underline-offset-8 decoration-2">Finance App</Link>
