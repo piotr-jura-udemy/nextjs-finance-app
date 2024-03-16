@@ -2,7 +2,7 @@
 import Input from "@/components/input";
 import SubmitButton from "@/components/submit-button";
 import { login } from "@/lib/actions";
-import {useFormState} from "react-dom"
+import { useFormState } from "react-dom"
 
 const initialState = {
   message: '',
