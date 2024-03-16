@@ -1,9 +1,9 @@
 'use client'
-import Alert from "@/components/alert"
+import AlertError from "@/components/alert-error"
+import AlertSuccess from "@/components/alert-success"
 import Input from "@/components/input"
 import SubmitButton from "@/components/submit-button"
 import { uploadAvatar } from "@/lib/actions"
-import { Ban, Check } from 'lucide-react'
 import { useFormState } from 'react-dom'
 
 const initialState = {
@@ -18,8 +18,8 @@ export default function Page() {
       Avatar
     </h1>
     <form className="space-y-4" action={formAction}>
-      {state?.error && <Alert icon={<Ban className="text-red-700 dark:text-red-300 w-6 h-6" />} title={<span className="text-red-700 dark:text-red-300">Error</span>}><span className="text-red-700 dark:text-red-300">{state?.message}</span></Alert>}
-      {!state?.error && state?.message.length > 0 && <Alert icon={<Check className="text-green-700 dark:text-green-300 w-6 h-6" />} title={<span className="text-green-700 dark:text-green-300">Success</span>}><span className="text-green-700 dark:text-green-300">{state?.message}</span></Alert>}
+      {state?.error && <AlertError>{state?.message}</AlertError>}
+      {!state?.error && state?.message.length > 0 && <AlertSuccess>{state?.message}</AlertSuccess>}
       <Input type="file" name="file" id="file" />
       <SubmitButton>Upload Avatar</SubmitButton>
     </form>
