@@ -14,7 +14,6 @@ const initialState = {
 };
 
 export default function SettingsForm({ defaults }) {
-  console.log(defaults);
   const [state, formAction] = useFormState(
     updateSettings,
     initialState,
@@ -27,7 +26,7 @@ export default function SettingsForm({ defaults }) {
       {!state?.error && state?.message.length > 0 && (
         <AlertSuccess>{state?.message}</AlertSuccess>
       )}
-      
+
       <Label htmlFor="fullName">User full name</Label>
       <Input type="text" name="fullName" id="fullName" placeholder="User full name" defaultValue={defaults?.fullName} />
 

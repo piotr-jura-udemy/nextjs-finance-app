@@ -12,16 +12,15 @@ import TransactionListWrapper from "./components/transaction-list-wrapper"
 import { createClient } from "@/lib/supabase/server"
 
 export default async function Page({ searchParams }) {
-  const range = searchParams?.range ?? 'last30days'
-
   const supabase = createClient()
-  console.log(await supabase.auth.getUser())
+  const { data: { user: { user_metadata: settings } } } = await supabase.auth.getUser()
+  const range = searchParams?.range ?? settings?.defaultView ?? 'last30days'
 
   return (<div className="space-y-8">
     <section className="flex justify-between items-center">
       <h1 className="text-4xl font-semibold">Summary</h1>
       <aside>
-        <Range />
+        <Range defaultView={settings?.defaultView} />
       </aside>
     </section>
 
